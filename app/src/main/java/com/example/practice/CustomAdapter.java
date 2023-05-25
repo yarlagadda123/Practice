@@ -15,6 +15,9 @@ import com.jakewharton.picasso.OkHttp3Downloader;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
+
+import retrofit2.http.Body;
+
 public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomViewHolder>{
     List<RetroPhoto>datalist;
     Context context;
@@ -52,10 +55,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
     public class CustomViewHolder extends RecyclerView.ViewHolder {
         TextView textitle;
         ImageView image;
+        Body body;
         public CustomViewHolder(@NonNull View itemView) {
             super(itemView);
             textitle = itemView.findViewById(R.id.title);
             image = itemView.findViewById(R.id.image);
+            body = itemView.findViewById(R.id.body);
         }
     }
+
 }
